@@ -1,0 +1,21 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts - О БД по-русски</title>
+    <link>https://db-ru.github.io/posts/</link>
+    <description>Recent content in Posts on О БД по-русски</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru</language>
+    <lastBuildDate>Sat, 11 Jul 2020 20:09:43 +0300</lastBuildDate>
+    
+        <atom:link href="https://db-ru.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Readings in Database Systems. Предисловие</title>
+      <link>https://db-ru.github.io/posts/readings-in-database-systems-0-preface/</link>
+      <pubDate>Sat, 11 Jul 2020 20:09:43 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/posts/readings-in-database-systems-0-preface/</guid>
+      <description>Readings in Database Systems (широко известная как &amp;lsquo;Red book&amp;rsquo;) предлагает читателям своевольный взгляд как на классические, так и на передовые исследования в области управления данными с 1988 года. Здесь мы представлено пятое издание - первое за последние десять лет (2015).</description>
+    </item>
+  </channel>
+</rss>

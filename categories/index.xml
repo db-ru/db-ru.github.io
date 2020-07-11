@@ -5,9 +5,24 @@
     <description>Recent content in Categories on О БД по-русски</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru</language>
+    <lastBuildDate>Sat, 11 Jul 2020 20:09:43 +0300</lastBuildDate>
     
         <atom:link href="https://db-ru.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
+    <item>
+      <title>readings in database systems</title>
+      <link>https://db-ru.github.io/categories/readings-in-database-systems/</link>
+      <pubDate>Sat, 11 Jul 2020 20:09:43 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/categories/readings-in-database-systems/</guid>
+      <description></description>
+    </item><item>
+      <title>red book</title>
+      <link>https://db-ru.github.io/categories/red-book/</link>
+      <pubDate>Sat, 11 Jul 2020 20:09:43 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/categories/red-book/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

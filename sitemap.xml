@@ -4,14 +4,36 @@
   
   <url>
     <loc>https://db-ru.github.io/categories/</loc>
+    <lastmod>2020-07-11T20:09:43+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://db-ru.github.io/tags/</loc>
+    <loc>https://db-ru.github.io/posts/</loc>
+    <lastmod>2020-07-11T20:09:43+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/categories/readings-in-database-systems/</loc>
+    <lastmod>2020-07-11T20:09:43+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/posts/readings-in-database-systems-0-preface/</loc>
+    <lastmod>2020-07-11T20:09:43+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/categories/red-book/</loc>
+    <lastmod>2020-07-11T20:09:43+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://db-ru.github.io/</loc>
+    <lastmod>2020-07-11T20:09:43+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/tags/</loc>
   </url>
   
 </urlset>
