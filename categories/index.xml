@@ -5,23 +5,44 @@
     <description>Recent content in Categories on О БД по-русски</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru</language>
-    <lastBuildDate>Sat, 11 Jul 2020 20:09:43 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2020 12:41:13 +0300</lastBuildDate>
     
         <atom:link href="https://db-ru.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>readings in database systems</title>
-      <link>https://db-ru.github.io/categories/readings-in-database-systems/</link>
-      <pubDate>Sat, 11 Jul 2020 20:09:43 +0300</pubDate>
+      <title>data lake</title>
+      <link>https://db-ru.github.io/categories/data-lake/</link>
+      <pubDate>Sun, 12 Jul 2020 12:41:13 +0300</pubDate>
       
-      <guid>https://db-ru.github.io/categories/readings-in-database-systems/</guid>
+      <guid>https://db-ru.github.io/categories/data-lake/</guid>
       <description></description>
     </item><item>
-      <title>red book</title>
-      <link>https://db-ru.github.io/categories/red-book/</link>
-      <pubDate>Sat, 11 Jul 2020 20:09:43 +0300</pubDate>
+      <title>hdfs</title>
+      <link>https://db-ru.github.io/categories/hdfs/</link>
+      <pubDate>Sun, 12 Jul 2020 12:41:13 +0300</pubDate>
       
-      <guid>https://db-ru.github.io/categories/red-book/</guid>
+      <guid>https://db-ru.github.io/categories/hdfs/</guid>
+      <description></description>
+    </item><item>
+      <title>json</title>
+      <link>https://db-ru.github.io/categories/json/</link>
+      <pubDate>Sun, 12 Jul 2020 12:41:13 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/categories/json/</guid>
+      <description></description>
+    </item><item>
+      <title>map-reduce</title>
+      <link>https://db-ru.github.io/categories/map-reduce/</link>
+      <pubDate>Sun, 12 Jul 2020 12:41:13 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/categories/map-reduce/</guid>
+      <description></description>
+    </item><item>
+      <title>readings in database systems</title>
+      <link>https://db-ru.github.io/categories/readings-in-database-systems/</link>
+      <pubDate>Sun, 12 Jul 2020 12:41:13 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/categories/readings-in-database-systems/</guid>
       <description></description>
     </item>
   </channel>

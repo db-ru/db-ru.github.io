@@ -5,11 +5,18 @@
     <description>Recent content in readings in database systems on О БД по-русски</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru</language>
-    <lastBuildDate>Sat, 11 Jul 2020 20:09:43 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2020 12:41:13 +0300</lastBuildDate>
     
         <atom:link href="https://db-ru.github.io/categories/readings-in-database-systems/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Readings in Database Systems. Основы</title>
+      <link>https://db-ru.github.io/posts/readings-in-database-systems-1-background/</link>
+      <pubDate>Sun, 12 Jul 2020 12:41:13 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/posts/readings-in-database-systems-1-background/</guid>
+      <description></description>
+    </item><item>
       <title>Readings in Database Systems. Предисловие</title>
       <link>https://db-ru.github.io/posts/readings-in-database-systems-0-preface/</link>
       <pubDate>Sat, 11 Jul 2020 20:09:43 +0300</pubDate>

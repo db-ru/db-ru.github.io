@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Readings in Database Systems. Основы &middot; О БД по-русски</title>
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  
+  
+  
+  
+  
+  <link href="https://db-ru.github.io/css/concated.min.css" rel="stylesheet">
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-172438274-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  
+</head>
+
+  <body class="single-body">
+    <nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="https://db-ru.github.io" class="nav-text">О БД по-русски</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="https://db-ru.github.io" class="hamburger-menu-overlay-link">Home</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/data-lake/" class="hamburger-menu-overlay-link">data lake</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/hdfs/" class="hamburger-menu-overlay-link">hdfs</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/json/" class="hamburger-menu-overlay-link">json</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/map-reduce/" class="hamburger-menu-overlay-link">map-reduce</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/readings-in-database-systems/" class="hamburger-menu-overlay-link">readings in database systems</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/red-book/" class="hamburger-menu-overlay-link">red book</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/xml/" class="hamburger-menu-overlay-link">xml</a></li>
+      
+      
+    </ul>
+  </div>
+</nav>
+
+    <main class="content side-text-padding">
+      <article class="post dropcase">
+        <header class="post-header">
+          <h1 class="post-title">Readings in Database Systems. Основы</h1>
+          <p class="post-date">Posted <time datetime="2020-07-12">Jul 12, 2020</time></p>
+        </header>
+        
+        
+        <h1 id="1-">1. Основы</h1>
+<blockquote>
+<p>Избранные статьи:</p>
+<ul>
+<li>Joseph M. Hellerstein and Michael Stonebraker. What Goes Around Comes
+Around. <em>Readings in Database Systems</em>, 4th Edition (2005).</li>
+<li>Joseph M. Hellerstein, Michael Stonebraker, James Hamilton. Architecture of
+a Database System. <em>Foundations and Trends in Databases</em>, 1, 2 (2007).</li>
+</ul>
+</blockquote>
+<p>Я поражен тем, что эти две статьи были написаны всего десять лет назад! Моё
+восхищение относительно статьи по внутренностям вызвано тем, насколько сильно
+изменились детали всего несколько лет спустя. Мое изумление по поводу статьи по
+моделям данных состоит в том, что никто никогда не извлекает уроки из истории.
+Давайте сначала поговорим о статье по работе с моделями данных.</p>
+<p>Десять лет назад у всех на слуху был XML. Вендоры намеревались добавить XML в
+свои реляционные движки. Отраслевые аналитики (и более чем, несколько
+исследователей) рекламировали XML как «следующую большую вещь». Через десяток
+лет, это всего лишь нишевый продукт, а отрасль продолжила развиваться. На мой
+взгляд, (как и предсказывалось в статье) он уступил комбинации:</p>
+<ul>
+<li>чрезмерная сложность (которую никто не мог понять)</li>
+<li>сложные расширения реляционных движков, которые, кажется, не работают
+достаточно хорошо</li>
+<li>нет убедительного варианта использования, где бы он широко принянялся</li>
+</ul>
+<p>Немного иронично, что в статье был сделан прогноз, что X выиграет премию
+Тьюринга, успешно упростив XML. Этот прогноз оказался полностью неверным!
+Чистая сеть была той реляционной победой, а XML проиграл.</p>
+<p>Конечно, это не помешало новичкам изобретать велосипед. Теперь это JSON, который
+можно посмотреть одним из трех способов:</p>
+<ul>
+<li>Общий иерархический формат данных. Любой, кто считает это хорошей идеей,
+должен прочитать раздел документа по модели данных в IMS.</li>
+<li>Представление для разреженных данных. Рассмотрим атрибуты о сотруднике и
+предположим, что мы хотим записать данные о хобби. Для каждого хобби данные,
+которые мы записываем, будут разными, а хобби фундаментально редкими. Это
+легко моделировать в реляционной СУБД, но приводит к очень широким и очень
+разреженным таблицам. Это катастрофично для дисковых построковых хранилищ, но
+отлично работает в поколоночных хранилищах. В последнем случае JSON является
+приемлемым форматом кодирования для столбца «хобби», и несколько РСУБД недавно
+добавили поддержку типа данных JSON.</li>
+<li>Как механизм для «схемы на чтение». В сущности, схема очень широкая и очень
+разреженная, и, по сути, все пользователи захотят получить некоторую проекцию
+этой схемы. При чтении из широкой разреженной схемы пользователь может
+сказать, что он хочет видеть во время выполнения. Концептуально, это не что
+иное, как операция проекции. Следовательно, «схема на чтение» - это просто
+реляционная операция над данными в кодировке JSON.</li>
+</ul>
+<p>Таким образом, JSON является разумным выбором для разреженных данных. В этом
+контексте я ожидаю, что у него будет достаточное количество «ног». С другой
+стороны, это будет катастрофой, если его сделать общим иерархическим форматом
+данных. Я ожидаю, что СУБД будут использовать JSON как простой тип данных
+(среди многих) в своих системах. Другими словами, это разумный способ
+кодирования резервных реляционных данных. Без сомнения, в следующей версии
+«Красной книги» появится новый иерархический формат, придуманный людьми, которые
+стоят на пальцах ног своих предшественников, а не на их плечах.</p>
+<p>Другая модель данных, которая вызвала много шума в последнее десятилетие - это
+Map-Reduce, специально созданная Google для поддержки своей базы данных
+веб-сканирования. Несколько лет спустя Google прекратил использовать Map-Reduce
+для этого приложения, перейдя вместо этого на Big Table. Теперь остальной мир
+видит, что Google выяснил ранее: Map-Reduce - это не архитектура с какой-либо
+широкой применимостью. Вместо этого рынок Map-Reduce превратился в рынок HDFS и,
+похоже, готов стать рынком реляционных SQL. Например, Cloudera недавно
+представила Impala - движок SQL, построенный на основе HDFS, не использующий
+Map-Reduce.</p>
+<p>Совсем недавно в мире HDFS возникло еще одно направление, заслуживающее
+обсуждения, а именно «озера данных». Разумное использование кластера HDFS (в
+который, в настоящее время, большинство предприятий вложили средства и хотят найти
+что-то полезное для них) - это как очередь файлов данных, которые были
+загружены. Со временем предприятия выяснят, какие из них стоит потратить на
+очистку (оценка данных; рассматривается в главе 12 этой книги). Следовательно,
+озеро данных - это просто «ящик для мусора» для файлов. Кроме того, мы расскажем
+больше о HDFS, Spark и Hadoop в главе 5.</p>
+<p>Таким образом, в последнее десятилетие никто, кажется, не учел уроки из &ldquo;What
+Goes Around Comes Around&rdquo;.  Новые модели данных были изобретены только для
+преобразования в SQL для таблиц. Иерархические структуры были заново изобретены
+с провалом в качестве предсказанного результата. Я не удивлюсь, увидев, что
+следующее десятилетие будет таким же. Люди, кажется, обречены изобретать велосипед!</p>
+<p>Что касается статьи о внутренностях: всего лишь спустя десятилетие мы можем
+отметить существенные изменения в том, как построены СУБД. Следовательно, детали
+сильно изменились, но общая архитектура, описанная в статье, все еще в
+значительной степени верна. В документе описывается, как работает большинство
+унаследованных СУБД (например, Oracle, DB2), а десять лет назад это была
+распространенная реализация. Теперь эти системы являются историческими
+артефактами; не очень хорошими во всём. Например, на рынке хранилищ данных
+столбцовые движки заменили строковые, описанные в этом документе, поскольку
+они на 1–2 порядка быстрее. В мире OLTP SQL движки в основной памяти с очень
+легкими транзакциями быстро становятся нормой. Эти новые разработки описаны
+в главе 4 этой книги. В настоящее время трудно найти область применения, где
+устаревшие построчные хранилища конкурентоспособны. Как таковые, они заслуживают
+того, чтобы их отправили в «дом для старых программ».</p>
+<p>Трудно представить, что «один размер подходит всем» когда-нибудь снова станет
+доминирующей архитектурой. Следовательно, у «слонов» есть проблема «дилеммы
+новаторов». В классической книге Клейтона Кристиансена он утверждает, что
+поставщикам устаревших технологий трудно трансформироваться в новые конструкции,
+не теряя при этом свою клиентскую базу. Однако уже очевидно, как будут пытаться
+слоны. Например, SQLServer 14 - это как минимум два движка (Hekaton - система
+OLTP с основной памятью и обычный SQLServer - устаревшее хранилище строк),
+объединенных под общим парсером. Следовательно, стратегия Microsoft состоит в
+том, чтобы явно добавлять новые движки под их унаследованный синтаксический
+анализатор, а затем поддерживать перемещение данных из устаревшего движка в
+более современные, не мешая приложениям. Еще неизвестно, насколько успешным это
+будет.</p>
+<p>Однако базовая архитектура этих новых систем продолжает следовать структуре
+синтаксического анализа/оптимизатора/исполнителя, описанной в этой статье.
+Кроме того, модель потоков и структура процессов сегодня так же актуальны, как и
+десять лет назад. Таким образом, читатель должен отметить, что детали управления
+параллелизмом, восстановления после сбоев, оптимизации, структур данных и
+индексации находятся в состоянии быстрого изменения, но базовая архитектура СУБД
+остается неизменной.</p>
+<p>Кроме того, этим устаревшим системам потребуется много времени, чтобы умереть.
+На самом деле, все еще существует огромное количество данных IMS в
+промышленном использовании. Таким образом, любому студенту в данной области
+настоятельно рекомендуется понимать архитектуру (доминирующую на некоторое
+время) систем.</p>
+<p>Кроме того, возможно, что аспекты этой статьи могут стать более актуальными в
+будущем по мере развития вычислительной архитектуры. Например, предстоящее
+появление NVRAM может предоставить возможность для новых архитектурных концепций
+или возрождения старых.</p>
+
+      </article>
+      
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://db-ru.github.io/posts/readings-in-database-systems-0-preface/" class="card blog-card" rel="bookmark" >
+  
+  <article class="card-body">
+    <h2 class="card-title">Readings in Database Systems. Предисловие</h2>
+    <p class="card-text">Readings in Database Systems (широко известная как &lsquo;Red book&rsquo;) предлагает читателям своевольный взгляд как на классические, так и на передовые исследования в области управления данными с 1988 года. Здесь представлено пятое издание - первое за последние десять лет (2015).</p>
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="2020-07-11 711:00">Jul 11, 2020</time></p>
+      <p>#readings in database systems #red book </p>
+    </div>
+  </article>
+</a>
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://db-ru.github.io" class="card home-card" style="background-image: url( https://db-ru.github.io/img/grey-cloud.jpg )" rel="bookmark" >
+  Home
+</a>
+    </nav>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+  
+  <script src="https://db-ru.github.io/js/core.min.js"></script>
+
+  </body>
+</html>
