@@ -4,7 +4,52 @@
   
   <url>
     <loc>https://db-ru.github.io/categories/</loc>
-    <lastmod>2020-07-12T12:41:13+03:00</lastmod>
+    <lastmod>2020-07-13T17:32:31+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/categories/gamma/</loc>
+    <lastmod>2020-07-13T17:32:31+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/categories/postgres/</loc>
+    <lastmod>2020-07-13T17:32:31+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/posts/</loc>
+    <lastmod>2020-07-13T17:32:31+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/categories/rdbms/</loc>
+    <lastmod>2020-07-13T17:32:31+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/categories/readings-in-database-systems/</loc>
+    <lastmod>2020-07-13T17:32:31+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/posts/readings-in-database-systems-2-traditional-rdbms-systems/</loc>
+    <lastmod>2020-07-13T17:32:31+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/categories/red-book/</loc>
+    <lastmod>2020-07-13T17:32:31+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/categories/system-r/</loc>
+    <lastmod>2020-07-13T17:32:31+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/</loc>
+    <lastmod>2020-07-13T17:32:31+03:00</lastmod>
   </url>
   
   <url>
@@ -28,32 +73,12 @@
   </url>
   
   <url>
-    <loc>https://db-ru.github.io/posts/</loc>
-    <lastmod>2020-07-12T12:41:13+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://db-ru.github.io/categories/readings-in-database-systems/</loc>
-    <lastmod>2020-07-12T12:41:13+03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://db-ru.github.io/posts/readings-in-database-systems-1-background/</loc>
     <lastmod>2020-07-12T12:41:13+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://db-ru.github.io/categories/red-book/</loc>
-    <lastmod>2020-07-12T12:41:13+03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://db-ru.github.io/categories/xml/</loc>
-    <lastmod>2020-07-12T12:41:13+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://db-ru.github.io/</loc>
     <lastmod>2020-07-12T12:41:13+03:00</lastmod>
   </url>
   
