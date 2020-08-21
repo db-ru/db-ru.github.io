@@ -4,7 +4,52 @@
   
   <url>
     <loc>https://db-ru.github.io/categories/</loc>
-    <lastmod>2020-07-17T17:32:31+03:00</lastmod>
+    <lastmod>2020-07-23T10:24:43+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/categories/concurrency-control/</loc>
+    <lastmod>2020-07-23T10:24:43+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/categories/database-recovery/</loc>
+    <lastmod>2020-07-23T10:24:43+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/categories/distribution/</loc>
+    <lastmod>2020-07-23T10:24:43+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/posts/</loc>
+    <lastmod>2020-07-23T10:24:43+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/categories/query-optimization/</loc>
+    <lastmod>2020-07-23T10:24:43+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/categories/readings-in-database-systems/</loc>
+    <lastmod>2020-07-23T10:24:43+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/posts/readings-in-database-systems-3-techniques-everyone-should-know/</loc>
+    <lastmod>2020-07-23T10:24:43+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/categories/red-book/</loc>
+    <lastmod>2020-07-23T10:24:43+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/</loc>
+    <lastmod>2020-07-23T10:24:43+03:00</lastmod>
   </url>
   
   <url>
@@ -18,17 +63,7 @@
   </url>
   
   <url>
-    <loc>https://db-ru.github.io/posts/</loc>
-    <lastmod>2020-07-17T17:32:31+03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://db-ru.github.io/categories/rdbms/</loc>
-    <lastmod>2020-07-17T17:32:31+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://db-ru.github.io/categories/readings-in-database-systems/</loc>
     <lastmod>2020-07-17T17:32:31+03:00</lastmod>
   </url>
   
@@ -38,17 +73,7 @@
   </url>
   
   <url>
-    <loc>https://db-ru.github.io/categories/red-book/</loc>
-    <lastmod>2020-07-17T17:32:31+03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://db-ru.github.io/categories/system-r/</loc>
-    <lastmod>2020-07-17T17:32:31+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://db-ru.github.io/</loc>
     <lastmod>2020-07-17T17:32:31+03:00</lastmod>
   </url>
   

@@ -1,0 +1,21 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>database recovery - О БД по-русски</title>
+    <link>https://db-ru.github.io/categories/database-recovery/</link>
+    <description>Recent content in database recovery on О БД по-русски</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru</language>
+    <lastBuildDate>Thu, 23 Jul 2020 10:24:43 +0300</lastBuildDate>
+    
+        <atom:link href="https://db-ru.github.io/categories/database-recovery/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Readings in Database Systems 3. Методы, которые должен знать каждый</title>
+      <link>https://db-ru.github.io/posts/readings-in-database-systems-3-techniques-everyone-should-know/</link>
+      <pubDate>Thu, 23 Jul 2020 10:24:43 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/posts/readings-in-database-systems-3-techniques-everyone-should-know/</guid>
+      <description>В этой главе мы представляем первичные и почти первичные источники для нескольких наиболее важных концепций проектирования систем баз данных: планирование запросов, контроль параллелизма, восстановление базы данных и распределённость. Идеи в этой главе настолько фундаментальны для современных систем баз данных, что их содержит почти каждая зрелая БД. Три статьи в этой главе - это, безусловно, канонические ссылки на соответствующие темы. Более того, в отличие от предыдущей главы, эта глава фокусируется на широко применяемых методах и алгоритмах, а не на целых системах.</description>
+    </item>
+  </channel>
+</rss>

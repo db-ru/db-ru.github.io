@@ -5,11 +5,18 @@
     <description>Recent content in Posts on О БД по-русски</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru</language>
-    <lastBuildDate>Fri, 17 Jul 2020 17:32:31 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2020 10:24:43 +0300</lastBuildDate>
     
         <atom:link href="https://db-ru.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Readings in Database Systems 3. Методы, которые должен знать каждый</title>
+      <link>https://db-ru.github.io/posts/readings-in-database-systems-3-techniques-everyone-should-know/</link>
+      <pubDate>Thu, 23 Jul 2020 10:24:43 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/posts/readings-in-database-systems-3-techniques-everyone-should-know/</guid>
+      <description>В этой главе мы представляем первичные и почти первичные источники для нескольких наиболее важных концепций проектирования систем баз данных: планирование запросов, контроль параллелизма, восстановление базы данных и распределённость. Идеи в этой главе настолько фундаментальны для современных систем баз данных, что их содержит почти каждая зрелая БД. Три статьи в этой главе - это, безусловно, канонические ссылки на соответствующие темы. Более того, в отличие от предыдущей главы, эта глава фокусируется на широко применяемых методах и алгоритмах, а не на целых системах.</description>
+    </item><item>
       <title>Readings in Database Systems. Традиционные реляционные СУДБ</title>
       <link>https://db-ru.github.io/posts/readings-in-database-systems-2-traditional-rdbms-systems/</link>
       <pubDate>Fri, 17 Jul 2020 17:32:31 +0300</pubDate>

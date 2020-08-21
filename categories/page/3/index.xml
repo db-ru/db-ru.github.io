@@ -5,11 +5,39 @@
     <description>Recent content in Categories on О БД по-русски</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru</language>
-    <lastBuildDate>Fri, 17 Jul 2020 17:32:31 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2020 10:24:43 +0300</lastBuildDate>
     
         <atom:link href="https://db-ru.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>data lake</title>
+      <link>https://db-ru.github.io/categories/data-lake/</link>
+      <pubDate>Sun, 12 Jul 2020 12:41:13 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/categories/data-lake/</guid>
+      <description></description>
+    </item><item>
+      <title>hdfs</title>
+      <link>https://db-ru.github.io/categories/hdfs/</link>
+      <pubDate>Sun, 12 Jul 2020 12:41:13 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/categories/hdfs/</guid>
+      <description></description>
+    </item><item>
+      <title>json</title>
+      <link>https://db-ru.github.io/categories/json/</link>
+      <pubDate>Sun, 12 Jul 2020 12:41:13 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/categories/json/</guid>
+      <description></description>
+    </item><item>
+      <title>map-reduce</title>
+      <link>https://db-ru.github.io/categories/map-reduce/</link>
+      <pubDate>Sun, 12 Jul 2020 12:41:13 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/categories/map-reduce/</guid>
+      <description></description>
+    </item><item>
       <title>xml</title>
       <link>https://db-ru.github.io/categories/xml/</link>
       <pubDate>Sun, 12 Jul 2020 12:41:13 +0300</pubDate>
