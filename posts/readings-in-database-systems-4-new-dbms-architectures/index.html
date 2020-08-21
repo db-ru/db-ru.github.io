@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Readings in Database Systems 4. Новые архитектуры СУБД &middot; О БД по-русски</title>
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  
+  
+  
+  
+  
+  <link href="https://db-ru.github.io/css/concated.min.css" rel="stylesheet">
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-172438274-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  
+</head>
+
+  <body class="single-body">
+    <nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="https://db-ru.github.io" class="nav-text">О БД по-русски</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="https://db-ru.github.io" class="hamburger-menu-overlay-link">Home</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/column-store/" class="hamburger-menu-overlay-link">column store</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/concurrency-control/" class="hamburger-menu-overlay-link">concurrency control</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/data-lake/" class="hamburger-menu-overlay-link">data lake</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/database-recovery/" class="hamburger-menu-overlay-link">database recovery</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/distribution/" class="hamburger-menu-overlay-link">distribution</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/gamma/" class="hamburger-menu-overlay-link">gamma</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/hdfs/" class="hamburger-menu-overlay-link">hdfs</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/json/" class="hamburger-menu-overlay-link">json</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/map-reduce/" class="hamburger-menu-overlay-link">map-reduce</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/oltp/" class="hamburger-menu-overlay-link">oltp</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/postgres/" class="hamburger-menu-overlay-link">postgres</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/query-optimization/" class="hamburger-menu-overlay-link">query optimization</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/rdbms/" class="hamburger-menu-overlay-link">rdbms</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/readings-in-database-systems/" class="hamburger-menu-overlay-link">readings in database systems</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/red-book/" class="hamburger-menu-overlay-link">red book</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/row-store/" class="hamburger-menu-overlay-link">row store</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/system-r/" class="hamburger-menu-overlay-link">system r</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/two-phase-commit/" class="hamburger-menu-overlay-link">two-phase commit</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/two-phase-locking/" class="hamburger-menu-overlay-link">two-phase locking</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/xml/" class="hamburger-menu-overlay-link">xml</a></li>
+      
+      
+    </ul>
+  </div>
+</nav>
+
+    <main class="content side-text-padding">
+      <article class="post dropcase">
+        <header class="post-header">
+          <h1 class="post-title">Readings in Database Systems 4. Новые архитектуры СУБД</h1>
+          <p class="post-date">Posted <time datetime="2020-08-21">Aug 21, 2020</time></p>
+        </header>
+        
+        
+        <h1 id="4---">4. Новые архитектуры СУБД</h1>
+<blockquote>
+<p>Избранные статьи:</p>
+<ul>
+<li>
+<p>Mike Stonebraker, Daniel J. Abadi, Adam Batkin, Xuedong Chen, Mitch
+Cherniack, Miguel Ferreira, Edmond Lau, Amerson Lin, Sam Madden,
+Elizabeth O’Neil, Pat O’Neil, Alex Rasin, Nga Tran, Stan Zdonik. C-store:
+A Column-oriented DBMS. SIGMOD, 2005.</p>
+</li>
+<li>
+<p>Cristian Diaconu, Craig Freedman, Erik Ismert, Per-Ake Larson, Pravin Mittal,
+Ryan Stonecipher, Nitin Verma, Mike Zwilling. Hekaton: SQL Server’s
+Memory-optimized OLTP Engine. SIGMOD, 2013.</p>
+</li>
+<li>
+<p>Stavros Harizopoulos, Daniel J. Abadi, Samuel Madden, Michael Stonebraker.
+OLTP Through the Looking Glass, and What We Found There. SIGMOD, 2008.</p>
+</li>
+</ul>
+<p>Автор: Michael Stonebraker</p>
+</blockquote>
+Вероятно, самое важное, что произошло в среде СУБД, - это смерть подхода «всех под одну гребенку». До начала 2000-х годов традиционная дисковая архитектура с построчным хранением была повсеместной. Фактически, у коммерческих продавцов был молоток, и всё было гвоздем. За последние пятнадцать лет произошло несколько серьезных потрясений, которые мы обсудим по очереди.
+<p>Во-первых, сообщество осознало, что поколоночное хранение значительно превосходит
+построчное хранение на рынке хранилищ данных. Хранилища данных быстро нашли
+применение в розничных сетях, ориентированных на клиентов, и быстро
+распространились на данные, ориентированные на клиентов в целом. В хранилищах
+записана историческая информация о транзакциях клиентов. По сути, это
+«кто-что-почему-когда-где» каждого взаимодействия с клиентом.</p>
+<p>Принято считать, что хранилище данных строится вокруг центральной таблицы
+фактов, в которой записывается эта транзакционная информация. Вокруг неё
+находятся таблицы измерений, в которых записывается информация, которая может
+быть извлечена из таблицы фактов. В сценарии розничной торговли есть таблицы
+измерений для магазинов, клиентов, продуктов и времени. Результатом является так
+называемая звездная схема <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. Если магазины сгруппированы по регионам, то
+может быть несколько уровней таблиц измерений, и в результате получится схема
+«снежинка».</p>
+<p>Ключевое наблюдение состоит в том, что таблицы фактов обычно «толстые» и часто
+содержат сотню или более атрибутов. Очевидно, они также «длинные», так как
+необходимо записать очень много фактов. Как правило, запросы к хранилищу данных
+представляют собой сочетание повторяющихся запросов (создание ежемесячного
+отчета о продажах по магазинам) и «специальных» (ad hoc) запросов. Например, на
+розничном складе можно узнать, что продается на северо-востоке во время снежной
+бури, а что продается на побережье Атлантического океана во время ураганов.</p>
+<p>Более того, никто не запускает запрос <code>select *</code> для получения всех строк в
+таблице фактов. Вместо этого указывают агрегат, который извлекает полдюжины
+атрибутов из 100 в таблице. Следующий запрос получает другой набор, и среди
+критериев фильтрации практически отсутствует локальность.</p>
+<p>В этом случае очевидно, что поколоночное хранилище переместит с диска в основную
+память в 16 раз меньше данных, чем построчное хранилище (6 столбцов против 100).
+Следовательно, у него есть несправедливое преимущество. Более того, рассмотрим
+блок хранения. В поколоночном хранилище в этом блоке будет один атрибут, тогда
+как в построчном хранилище будет 100. Очевидно, что сжатие будет работать лучше
+для одного атрибута, чем для 100. Кроме того, построчные хранилища хранят
+заголовок для каждой записи (в SQLServer это, вероятно, 16 байт). Напротив,
+поколоночные хранилища стараются не иметь такого заголовка.</p>
+<p>Наконец, построчный исполнитель имеет внутренний цикл, посредством которого
+запись валидируется на выходе. Следовательно, накладные расходы внутреннего
+цикла, которые являются значительными, приходятся на каждую проверяемую запись.
+Напротив, основная операция поколоночного хранилища состоит в том, чтобы извлечь
+столбец и выбрать подходящие элементы. Таким образом, накладные расходы
+внутреннего цикла возникают лишь один раз для каждого провереннего столбца,
+а не на каждую проверяемую строку. Таким образом, поколоночный исполнитель более
+эффективен в использовании процессора и извлекает с диска меньше данных. В
+большинстве реальных сред поколоночные хранилища в 50–100 раз быстрее, чем
+построчные хранилища.</p>
+<p>Ранние колоночные хранилища включали Sybase IQ <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, появившуюся в 1990-х, и
+MonetDB <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>. Однако эта технология восходит к 1970-м годам <sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>.
+В 2000-х годах C-Store/Vertica появился как хорошо финансируемый стартап с
+высокопроизводительной реализацией. В течение следующего десятилетия весь рынок
+хранилищ данных превратился из мира построчных хранилищ в мир колоночных хранилищ.
+Возможно, Sybase IQ могла бы сделать то же самое несколько раньше, если бы
+Sybase более активно инвестировала в технологию и реализовывала многоузловую
+реализацию. Преимущества поколоночного исполнителя убедительно обсуждается в
+<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>, хотя он и трудно читается.</p>
+<p>Вторым серьезным изменением стало резкое падение цен на основные модули памяти.
+В настоящее время можно купить 1 терабайт примерно за 25 000 долларов, а
+высокопроизводительный вычислительный кластер с несколькими терабайтами можно
+купить за 100 000 долларов. Ключевой вывод заключается в том, что базы данных
+OLTP не такие уж и большие. Один терабайт - это очень большая OLTP база данных,
+которая является кандидатом на развертывание основной памяти. Как отмечено в
+статье «OLTP Through the Looking Glass, and What We Found There», нежелательно
+запускать дисковое хранилище строк, когда данные помещаются в основную память,
+накладные расходы слишком высоки.</p>
+<p>Фактически, рынок OLTP теперь становится основным рынком СУБД с памятью. Опять
+же, традиционные дисковые строчные хранилища просто неконкурентоспособны. Для
+хорошей работы необходимы новые решения для управления параллелизмом,
+восстановления после сбоев и многопоточности, и я ожидаю, что в ближайшие
+несколько лет архитектуры OLTP будут развиваться.</p>
+<p>На данный момент я предполагаю, что никто не будет использовать традиционную
+двухфазную блокировку (2PL). Скорее всего, будут преобладать методы, основанные
+на упорядочивании меток времени или нескольких версиях. В третьей статье этого
+раздела обсуждается Hekaton, реализующий современную схему MVCC.</p>
+<p>Также необходимо иметь дело с восстановлением после сбоя. В общем, предлагаемое
+решение - это репликация и аварийное переключение в режиме онлайн, которое было
+впервые предложено компанией Tandem два десятилетия назад. Традиционно
+считается, что нужно писать журнал, передавать его по сети, а затем  повторять
+транзакций на резервном сервере. В <sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup> было показано, что эта
+активно-пассивная архитектура в 3 раза уступает схеме актив-актив, где
+транзакции просто выполняются на каждой реплике. Если выполняется схема
+«активный-активный», необходимо обеспечить выполнение транзакций в одном и том
+же порядке на каждой реплике. К сожалению, MVCC этого не делает. Это привело к
+интересу к детерминированным схемам управления параллелизмом, которые, вероятно,
+будут намного быстрее в сквозной системе, чем MVCC.</p>
+<p>В любом случае OLTP движется к развертыванию в основной памяти, и для поддержки
+этого варианта использования развертывается новый класс СУБД в основной памяти.</p>
+<p>Третье развернувшееся явление - движение «no SQL». По сути, существует около 100
+СУБД, которые поддерживают различные модели данных и имеют следующие две
+характеристики:</p>
+<ul>
+<li>Подход «Из коробки». Программисту легко приступить к работе и сделать что-то
+рабочее. РСУБД, напротив, очень тяжелы и требуют заранее созданной схемы.</li>
+<li>Поддержка полуструктурированных данных. Каждая запись может содержать
+различные наборы атрибутов. В традиционных СУБД такой подход повлечет таблицы
+с большим количеством колонок (широкий кортеж), которые при этом будут сильно
+разражены. Следовательно, это будет крайне неэфективно.</li>
+</ul>
+<p>Это тревожный сигнал для коммерческих поставщиков, которые хотят сделать системы
+более простыми в использовании и поддерживать полуструктурированные типы данных,
+такие как JSON. В целом, я ожидаю, что рынок No SQL со временем сольется с
+рынком SQL, поскольку СУБД реагируют на два упомянутых выше момента.</p>
+<p>Четвертое важное изменение - это появление среды Hadoop / HDFS / Spark, которая
+обсуждается в главе 6.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>R. Kimball and M. Ross. The data warehouse toolkit: the complete guide to
+dimensional modeling. John Wiley &amp; Sons, 2011. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>R. MacNicol and B. French. Sybase iq multiplex-designed for analytics.
+In VLDB, 2004. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>P. A. Boncz, M. Zukowski, and N. Nes. Monetdb/x100: Hyper-pipelining
+query execution. In CIDR, 2005. <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>D. S. Batory. On searching transposed files. ACM Transactions on Database
+Systems (TODS), 4(4), Dec. 1979. <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p>R. Lorie and A. Symonds. A relational access method for interactive
+applications. Courant Computer Science Symposia, Vol. 6: Data Base Systems, 1971. <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p>N. Malviya, A. Weisberg, S. Madden, and M. Stonebraker. Rethinking main
+memory OLTP recovery. In ICDE, 2014. <a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+      </article>
+      
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://db-ru.github.io/posts/readings-in-database-systems-3-techniques-everyone-should-know/" class="card blog-card" rel="bookmark" >
+  
+  <article class="card-body">
+    <h2 class="card-title">Readings in Database Systems 3. Методы, которые должен знать каждый</h2>
+    <p class="card-text">В этой главе мы представляем первичные и почти первичные источники для нескольких наиболее важных концепций проектирования систем баз данных: планирование запросов, контроль параллелизма, восстановление базы данных и распределённость. Идеи в этой главе настолько фундаментальны для современных систем баз данных, что их содержит почти каждая зрелая БД. Три статьи в этой главе - это, безусловно, канонические ссылки на соответствующие темы. Более того, в отличие от предыдущей главы, эта глава фокусируется на широко применяемых методах и алгоритмах, а не на целых системах.</p>
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="2020-07-23 723:00">Jul 23, 2020</time></p>
+      <p>#readings in database systems #red book #query optimization #concurrency control #database recovery #distribution #two-phase locking #two-phase commit </p>
+    </div>
+  </article>
+</a>
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://db-ru.github.io" class="card home-card" style="background-image: url( https://db-ru.github.io/img/grey-cloud.jpg )" rel="bookmark" >
+  Home
+</a>
+    </nav>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+  
+  <script src="https://db-ru.github.io/js/core.min.js"></script>
+
+  </body>
+</html>

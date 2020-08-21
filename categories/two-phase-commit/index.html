@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>two-phase commit &middot; О БД по-русски</title>
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  
+  
+  
+  
+  
+  <link href="https://db-ru.github.io/css/concated.min.css" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" href="https://db-ru.github.io/categories/two-phase-commit/index.xml" title="О БД по-русски" />
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-172438274-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  
+</head>
+
+  <body class="list-body">
+    <nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="https://db-ru.github.io" class="nav-text">О БД по-русски</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="https://db-ru.github.io" class="hamburger-menu-overlay-link">Home</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/column-store/" class="hamburger-menu-overlay-link">column store</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/concurrency-control/" class="hamburger-menu-overlay-link">concurrency control</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/data-lake/" class="hamburger-menu-overlay-link">data lake</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/database-recovery/" class="hamburger-menu-overlay-link">database recovery</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/distribution/" class="hamburger-menu-overlay-link">distribution</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/gamma/" class="hamburger-menu-overlay-link">gamma</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/hdfs/" class="hamburger-menu-overlay-link">hdfs</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/json/" class="hamburger-menu-overlay-link">json</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/map-reduce/" class="hamburger-menu-overlay-link">map-reduce</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/oltp/" class="hamburger-menu-overlay-link">oltp</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/postgres/" class="hamburger-menu-overlay-link">postgres</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/query-optimization/" class="hamburger-menu-overlay-link">query optimization</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/rdbms/" class="hamburger-menu-overlay-link">rdbms</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/readings-in-database-systems/" class="hamburger-menu-overlay-link">readings in database systems</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/red-book/" class="hamburger-menu-overlay-link">red book</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/row-store/" class="hamburger-menu-overlay-link">row store</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/system-r/" class="hamburger-menu-overlay-link">system r</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/two-phase-commit/" class="hamburger-menu-overlay-link">two-phase commit</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/two-phase-locking/" class="hamburger-menu-overlay-link">two-phase locking</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/xml/" class="hamburger-menu-overlay-link">xml</a></li>
+      
+      
+    </ul>
+  </div>
+</nav>
+
+    <main class="card-container side-gutter">
+      <header class="list-header">
+        <h1 class="list-header-title">two-phase commit</h1>
+        
+      </header>
+      
+      
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://db-ru.github.io/posts/readings-in-database-systems-3-techniques-everyone-should-know/" class="card blog-card" rel="bookmark" >
+  
+  <article class="card-body">
+    <h2 class="card-title">Readings in Database Systems 3. Методы, которые должен знать каждый</h2>
+    <p class="card-text">В этой главе мы представляем первичные и почти первичные источники для нескольких наиболее важных концепций проектирования систем баз данных: планирование запросов, контроль параллелизма, восстановление базы данных и распределённость. Идеи в этой главе настолько фундаментальны для современных систем баз данных, что их содержит почти каждая зрелая БД. Три статьи в этой главе - это, безусловно, канонические ссылки на соответствующие темы. Более того, в отличие от предыдущей главы, эта глава фокусируется на широко применяемых методах и алгоритмах, а не на целых системах.</p>
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="2020-07-23">Jul 23, 2020</time></p>
+      <p>#Readings-in-Database-Systems #Red-Book #Query-Optimization #Concurrency-Control #Database-Recovery #Distribution #Two-Phase-Locking #Two-Phase-Commit </p>
+    </div>
+  </article>
+</a>
+    </main>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+  
+  <script src="https://db-ru.github.io/js/core.min.js"></script>
+
+  </body>
+</html>

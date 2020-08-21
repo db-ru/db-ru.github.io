@@ -1,0 +1,21 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>column store - О БД по-русски</title>
+    <link>https://db-ru.github.io/categories/column-store/</link>
+    <description>Recent content in column store on О БД по-русски</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru</language>
+    <lastBuildDate>Fri, 21 Aug 2020 17:52:07 +0300</lastBuildDate>
+    
+        <atom:link href="https://db-ru.github.io/categories/column-store/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Readings in Database Systems 4. Новые архитектуры СУБД</title>
+      <link>https://db-ru.github.io/posts/readings-in-database-systems-4-new-dbms-architectures/</link>
+      <pubDate>Fri, 21 Aug 2020 17:52:07 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/posts/readings-in-database-systems-4-new-dbms-architectures/</guid>
+      <description>Вероятно, самое важное, что произошло в среде СУБД, - это смерть подхода «всех под одну гребенку». До начала 2000-х годов традиционная дисковая архитектура с построчным хранением была повсеместной. Фактически, у коммерческих продавцов был молоток, и всё было гвоздем. За последние пятнадцать лет произошло несколько серьезных потрясений, которые мы обсудим по очереди.</description>
+    </item>
+  </channel>
+</rss>

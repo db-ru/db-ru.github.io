@@ -4,7 +4,52 @@
   
   <url>
     <loc>https://db-ru.github.io/categories/</loc>
-    <lastmod>2020-07-23T10:24:43+03:00</lastmod>
+    <lastmod>2020-08-21T17:52:07+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/categories/column-store/</loc>
+    <lastmod>2020-08-21T17:52:07+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/categories/oltp/</loc>
+    <lastmod>2020-08-21T17:52:07+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/posts/</loc>
+    <lastmod>2020-08-21T17:52:07+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/categories/readings-in-database-systems/</loc>
+    <lastmod>2020-08-21T17:52:07+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/posts/readings-in-database-systems-4-new-dbms-architectures/</loc>
+    <lastmod>2020-08-21T17:52:07+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/categories/red-book/</loc>
+    <lastmod>2020-08-21T17:52:07+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/categories/row-store/</loc>
+    <lastmod>2020-08-21T17:52:07+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/categories/two-phase-locking/</loc>
+    <lastmod>2020-08-21T17:52:07+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://db-ru.github.io/</loc>
+    <lastmod>2020-08-21T17:52:07+03:00</lastmod>
   </url>
   
   <url>
@@ -23,17 +68,7 @@
   </url>
   
   <url>
-    <loc>https://db-ru.github.io/posts/</loc>
-    <lastmod>2020-07-23T10:24:43+03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://db-ru.github.io/categories/query-optimization/</loc>
-    <lastmod>2020-07-23T10:24:43+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://db-ru.github.io/categories/readings-in-database-systems/</loc>
     <lastmod>2020-07-23T10:24:43+03:00</lastmod>
   </url>
   
@@ -43,12 +78,7 @@
   </url>
   
   <url>
-    <loc>https://db-ru.github.io/categories/red-book/</loc>
-    <lastmod>2020-07-23T10:24:43+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://db-ru.github.io/</loc>
+    <loc>https://db-ru.github.io/categories/two-phase-commit/</loc>
     <lastmod>2020-07-23T10:24:43+03:00</lastmod>
   </url>
   
