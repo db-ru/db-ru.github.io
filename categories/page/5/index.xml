@@ -1,0 +1,35 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories - О БД по-русски</title>
+    <link>https://db-ru.github.io/categories/</link>
+    <description>Recent content in Categories on О БД по-русски</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru</language>
+    <lastBuildDate>Fri, 21 Aug 2020 17:52:07 +0300</lastBuildDate>
+    
+        <atom:link href="https://db-ru.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>map-reduce</title>
+      <link>https://db-ru.github.io/categories/map-reduce/</link>
+      <pubDate>Sun, 12 Jul 2020 12:41:13 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/categories/map-reduce/</guid>
+      <description></description>
+    </item><item>
+      <title>xml</title>
+      <link>https://db-ru.github.io/categories/xml/</link>
+      <pubDate>Sun, 12 Jul 2020 12:41:13 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/categories/xml/</guid>
+      <description></description>
+    </item><item>
+      <title>Joseph M. Hellerstein</title>
+      <link>https://db-ru.github.io/categories/joseph-m.-hellerstein/</link>
+      <pubDate>Sat, 11 Jul 2020 20:09:43 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/categories/joseph-m.-hellerstein/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

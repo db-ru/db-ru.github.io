@@ -1,0 +1,42 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Michael Stonebraker - О БД по-русски</title>
+    <link>https://db-ru.github.io/categories/michael-stonebraker/</link>
+    <description>Recent content in Michael Stonebraker on О БД по-русски</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru</language>
+    <lastBuildDate>Fri, 21 Aug 2020 17:52:07 +0300</lastBuildDate>
+    
+        <atom:link href="https://db-ru.github.io/categories/michael-stonebraker/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Readings in Database Systems 4. Новые архитектуры СУБД</title>
+      <link>https://db-ru.github.io/posts/readings-in-database-systems-4-new-dbms-architectures/</link>
+      <pubDate>Fri, 21 Aug 2020 17:52:07 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/posts/readings-in-database-systems-4-new-dbms-architectures/</guid>
+      <description>Вероятно, самое важное, что произошло в среде СУБД, - это смерть подхода «всех под одну гребенку». До начала 2000-х годов традиционная дисковая архитектура с построчным хранением была повсеместной. Фактически, у коммерческих продавцов был молоток, и всё было гвоздем. За последние пятнадцать лет произошло несколько серьезных потрясений, которые мы обсудим по очереди.</description>
+    </item><item>
+      <title>Readings in Database Systems. 2. Традиционные реляционные СУДБ</title>
+      <link>https://db-ru.github.io/posts/readings-in-database-systems-2-traditional-rdbms-systems/</link>
+      <pubDate>Fri, 17 Jul 2020 17:32:31 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/posts/readings-in-database-systems-2-traditional-rdbms-systems/</guid>
+      <description>В этом разделе представлены статьи (вероятно) о трёх наиболее важных настоящих СУБД. Мы обсудим их в хронологическом порядке.</description>
+    </item><item>
+      <title>Readings in Database Systems. 1. Основы</title>
+      <link>https://db-ru.github.io/posts/readings-in-database-systems-1-background/</link>
+      <pubDate>Sun, 12 Jul 2020 12:41:13 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/posts/readings-in-database-systems-1-background/</guid>
+      <description>Я поражен тем, что эти две статьи были написаны всего десять лет назад! Моё восхищение относительно статьи по внутренностям вызвано тем, насколько сильно изменились детали всего несколько лет спустя. Мое изумление по поводу статьи по моделям данных состоит в том, что никто никогда не извлекает уроки из истории. Давайте сначала поговорим о статье по работе с моделями данных.</description>
+    </item><item>
+      <title>Readings in Database Systems. 0. Предисловие</title>
+      <link>https://db-ru.github.io/posts/readings-in-database-systems-0-preface/</link>
+      <pubDate>Sat, 11 Jul 2020 20:09:43 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/posts/readings-in-database-systems-0-preface/</guid>
+      <description>Readings in Database Systems (широко известная как &amp;lsquo;Red book&amp;rsquo;) предлагает читателям своевольный взгляд как на классические, так и на передовые исследования в области управления данными с 1988 года. Здесь представлено пятое издание - первое за последние десять лет (2015).</description>
+    </item>
+  </channel>
+</rss>

@@ -17,6 +17,13 @@
       <guid>https://db-ru.github.io/categories/column-store/</guid>
       <description></description>
     </item><item>
+      <title>Michael Stonebraker</title>
+      <link>https://db-ru.github.io/categories/michael-stonebraker/</link>
+      <pubDate>Fri, 21 Aug 2020 17:52:07 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/categories/michael-stonebraker/</guid>
+      <description></description>
+    </item><item>
       <title>oltp</title>
       <link>https://db-ru.github.io/categories/oltp/</link>
       <pubDate>Fri, 21 Aug 2020 17:52:07 +0300</pubDate>
@@ -36,13 +43,6 @@
       <pubDate>Fri, 21 Aug 2020 17:52:07 +0300</pubDate>
       
       <guid>https://db-ru.github.io/categories/red-book/</guid>
-      <description></description>
-    </item><item>
-      <title>row store</title>
-      <link>https://db-ru.github.io/categories/row-store/</link>
-      <pubDate>Fri, 21 Aug 2020 17:52:07 +0300</pubDate>
-      
-      <guid>https://db-ru.github.io/categories/row-store/</guid>
       <description></description>
     </item>
   </channel>
