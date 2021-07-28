@@ -5,11 +5,32 @@
     <description>Recent content in Categories on О БД по-русски</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru</language>
-    <lastBuildDate>Fri, 21 Aug 2020 17:52:07 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2020 12:52:58 +0300</lastBuildDate>
     
         <atom:link href="https://db-ru.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>two-phase commit</title>
+      <link>https://db-ru.github.io/categories/two-phase-commit/</link>
+      <pubDate>Thu, 23 Jul 2020 10:24:43 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/categories/two-phase-commit/</guid>
+      <description></description>
+    </item><item>
+      <title>gamma</title>
+      <link>https://db-ru.github.io/categories/gamma/</link>
+      <pubDate>Fri, 17 Jul 2020 17:32:31 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/categories/gamma/</guid>
+      <description></description>
+    </item><item>
+      <title>postgres</title>
+      <link>https://db-ru.github.io/categories/postgres/</link>
+      <pubDate>Fri, 17 Jul 2020 17:32:31 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/categories/postgres/</guid>
+      <description></description>
+    </item><item>
       <title>rdbms</title>
       <link>https://db-ru.github.io/categories/rdbms/</link>
       <pubDate>Fri, 17 Jul 2020 17:32:31 +0300</pubDate>
@@ -22,27 +43,6 @@
       <pubDate>Fri, 17 Jul 2020 17:32:31 +0300</pubDate>
       
       <guid>https://db-ru.github.io/categories/system-r/</guid>
-      <description></description>
-    </item><item>
-      <title>data lake</title>
-      <link>https://db-ru.github.io/categories/data-lake/</link>
-      <pubDate>Sun, 12 Jul 2020 12:41:13 +0300</pubDate>
-      
-      <guid>https://db-ru.github.io/categories/data-lake/</guid>
-      <description></description>
-    </item><item>
-      <title>hdfs</title>
-      <link>https://db-ru.github.io/categories/hdfs/</link>
-      <pubDate>Sun, 12 Jul 2020 12:41:13 +0300</pubDate>
-      
-      <guid>https://db-ru.github.io/categories/hdfs/</guid>
-      <description></description>
-    </item><item>
-      <title>json</title>
-      <link>https://db-ru.github.io/categories/json/</link>
-      <pubDate>Sun, 12 Jul 2020 12:41:13 +0300</pubDate>
-      
-      <guid>https://db-ru.github.io/categories/json/</guid>
       <description></description>
     </item>
   </channel>

@@ -3,7 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://db-ru.github.io/categories/</loc>
-    <lastmod>2020-08-21T17:52:07+03:00</lastmod>
+    <lastmod>2020-08-23T12:52:58+03:00</lastmod>
+  </url><url>
+    <loc>https://db-ru.github.io/categories/dataflow-engine/</loc>
+    <lastmod>2020-08-23T12:52:58+03:00</lastmod>
+  </url><url>
+    <loc>https://db-ru.github.io/categories/google-file-system/</loc>
+    <lastmod>2020-08-23T12:52:58+03:00</lastmod>
+  </url><url>
+    <loc>https://db-ru.github.io/categories/map-reduce/</loc>
+    <lastmod>2020-08-23T12:52:58+03:00</lastmod>
+  </url><url>
+    <loc>https://db-ru.github.io/categories/peter-bailis/</loc>
+    <lastmod>2020-08-23T12:52:58+03:00</lastmod>
+  </url><url>
+    <loc>https://db-ru.github.io/posts/</loc>
+    <lastmod>2020-08-23T12:52:58+03:00</lastmod>
+  </url><url>
+    <loc>https://db-ru.github.io/categories/readings-in-database-systems/</loc>
+    <lastmod>2020-08-23T12:52:58+03:00</lastmod>
+  </url><url>
+    <loc>https://db-ru.github.io/posts/readings-in-database-systems-5-large-scale-dataflow-engines/</loc>
+    <lastmod>2020-08-23T12:52:58+03:00</lastmod>
+  </url><url>
+    <loc>https://db-ru.github.io/categories/red-book/</loc>
+    <lastmod>2020-08-23T12:52:58+03:00</lastmod>
+  </url><url>
+    <loc>https://db-ru.github.io/</loc>
+    <lastmod>2020-08-23T12:52:58+03:00</lastmod>
   </url><url>
     <loc>https://db-ru.github.io/categories/column-store/</loc>
     <lastmod>2020-08-21T17:52:07+03:00</lastmod>
@@ -14,25 +41,13 @@
     <loc>https://db-ru.github.io/categories/oltp/</loc>
     <lastmod>2020-08-21T17:52:07+03:00</lastmod>
   </url><url>
-    <loc>https://db-ru.github.io/posts/</loc>
-    <lastmod>2020-08-21T17:52:07+03:00</lastmod>
-  </url><url>
-    <loc>https://db-ru.github.io/categories/readings-in-database-systems/</loc>
-    <lastmod>2020-08-21T17:52:07+03:00</lastmod>
-  </url><url>
     <loc>https://db-ru.github.io/posts/readings-in-database-systems-4-new-dbms-architectures/</loc>
-    <lastmod>2020-08-21T17:52:07+03:00</lastmod>
-  </url><url>
-    <loc>https://db-ru.github.io/categories/red-book/</loc>
     <lastmod>2020-08-21T17:52:07+03:00</lastmod>
   </url><url>
     <loc>https://db-ru.github.io/categories/row-store/</loc>
     <lastmod>2020-08-21T17:52:07+03:00</lastmod>
   </url><url>
     <loc>https://db-ru.github.io/categories/two-phase-locking/</loc>
-    <lastmod>2020-08-21T17:52:07+03:00</lastmod>
-  </url><url>
-    <loc>https://db-ru.github.io/</loc>
     <lastmod>2020-08-21T17:52:07+03:00</lastmod>
   </url><url>
     <loc>https://db-ru.github.io/categories/concurrency-control/</loc>
@@ -42,9 +57,6 @@
     <lastmod>2020-07-23T10:24:43+03:00</lastmod>
   </url><url>
     <loc>https://db-ru.github.io/categories/distribution/</loc>
-    <lastmod>2020-07-23T10:24:43+03:00</lastmod>
-  </url><url>
-    <loc>https://db-ru.github.io/categories/peter-bailis/</loc>
     <lastmod>2020-07-23T10:24:43+03:00</lastmod>
   </url><url>
     <loc>https://db-ru.github.io/categories/query-optimization/</loc>
@@ -78,9 +90,6 @@
     <lastmod>2020-07-12T12:41:13+03:00</lastmod>
   </url><url>
     <loc>https://db-ru.github.io/categories/json/</loc>
-    <lastmod>2020-07-12T12:41:13+03:00</lastmod>
-  </url><url>
-    <loc>https://db-ru.github.io/categories/map-reduce/</loc>
     <lastmod>2020-07-12T12:41:13+03:00</lastmod>
   </url><url>
     <loc>https://db-ru.github.io/posts/readings-in-database-systems-1-background/</loc>

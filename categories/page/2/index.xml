@@ -5,44 +5,44 @@
     <description>Recent content in Categories on О БД по-русски</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru</language>
-    <lastBuildDate>Fri, 21 Aug 2020 17:52:07 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2020 12:52:58 +0300</lastBuildDate>
     
         <atom:link href="https://db-ru.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>red book</title>
+      <link>https://db-ru.github.io/categories/red-book/</link>
+      <pubDate>Sun, 23 Aug 2020 12:52:58 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/categories/red-book/</guid>
+      <description></description>
+    </item><item>
+      <title>column store</title>
+      <link>https://db-ru.github.io/categories/column-store/</link>
+      <pubDate>Fri, 21 Aug 2020 17:52:07 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/categories/column-store/</guid>
+      <description></description>
+    </item><item>
+      <title>Michael Stonebraker</title>
+      <link>https://db-ru.github.io/categories/michael-stonebraker/</link>
+      <pubDate>Fri, 21 Aug 2020 17:52:07 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/categories/michael-stonebraker/</guid>
+      <description></description>
+    </item><item>
+      <title>oltp</title>
+      <link>https://db-ru.github.io/categories/oltp/</link>
+      <pubDate>Fri, 21 Aug 2020 17:52:07 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/categories/oltp/</guid>
+      <description></description>
+    </item><item>
       <title>row store</title>
       <link>https://db-ru.github.io/categories/row-store/</link>
       <pubDate>Fri, 21 Aug 2020 17:52:07 +0300</pubDate>
       
       <guid>https://db-ru.github.io/categories/row-store/</guid>
-      <description></description>
-    </item><item>
-      <title>two-phase locking</title>
-      <link>https://db-ru.github.io/categories/two-phase-locking/</link>
-      <pubDate>Fri, 21 Aug 2020 17:52:07 +0300</pubDate>
-      
-      <guid>https://db-ru.github.io/categories/two-phase-locking/</guid>
-      <description></description>
-    </item><item>
-      <title>concurrency control</title>
-      <link>https://db-ru.github.io/categories/concurrency-control/</link>
-      <pubDate>Thu, 23 Jul 2020 10:24:43 +0300</pubDate>
-      
-      <guid>https://db-ru.github.io/categories/concurrency-control/</guid>
-      <description></description>
-    </item><item>
-      <title>database recovery</title>
-      <link>https://db-ru.github.io/categories/database-recovery/</link>
-      <pubDate>Thu, 23 Jul 2020 10:24:43 +0300</pubDate>
-      
-      <guid>https://db-ru.github.io/categories/database-recovery/</guid>
-      <description></description>
-    </item><item>
-      <title>distribution</title>
-      <link>https://db-ru.github.io/categories/distribution/</link>
-      <pubDate>Thu, 23 Jul 2020 10:24:43 +0300</pubDate>
-      
-      <guid>https://db-ru.github.io/categories/distribution/</guid>
       <description></description>
     </item>
   </channel>

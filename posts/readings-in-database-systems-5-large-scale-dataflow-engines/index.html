@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Readings in Database Systems 5. Масштабируемые механизмы обработки данных &middot; О БД по-русски</title>
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  
+  
+  
+  
+  
+  <link href="https://db-ru.github.io/css/concated.min.css" rel="stylesheet">
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-172438274-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+  
+</head>
+
+  <body class="single-body">
+    <nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="https://db-ru.github.io" class="nav-text">О БД по-русски</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="https://db-ru.github.io" class="hamburger-menu-overlay-link">Home</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/column-store/" class="hamburger-menu-overlay-link">column store</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/concurrency-control/" class="hamburger-menu-overlay-link">concurrency control</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/data-lake/" class="hamburger-menu-overlay-link">data lake</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/database-recovery/" class="hamburger-menu-overlay-link">database recovery</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/dataflow-engine/" class="hamburger-menu-overlay-link">dataflow engine</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/distribution/" class="hamburger-menu-overlay-link">distribution</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/gamma/" class="hamburger-menu-overlay-link">gamma</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/google-file-system/" class="hamburger-menu-overlay-link">google file system</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/hdfs/" class="hamburger-menu-overlay-link">hdfs</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/joseph-m.-hellerstein/" class="hamburger-menu-overlay-link">Joseph M. Hellerstein</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/json/" class="hamburger-menu-overlay-link">json</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/map-reduce/" class="hamburger-menu-overlay-link">map-reduce</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/michael-stonebraker/" class="hamburger-menu-overlay-link">Michael Stonebraker</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/oltp/" class="hamburger-menu-overlay-link">oltp</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/peter-bailis/" class="hamburger-menu-overlay-link">Peter Bailis</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/postgres/" class="hamburger-menu-overlay-link">postgres</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/query-optimization/" class="hamburger-menu-overlay-link">query optimization</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/rdbms/" class="hamburger-menu-overlay-link">rdbms</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/readings-in-database-systems/" class="hamburger-menu-overlay-link">readings in database systems</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/red-book/" class="hamburger-menu-overlay-link">red book</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/row-store/" class="hamburger-menu-overlay-link">row store</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/system-r/" class="hamburger-menu-overlay-link">system r</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/two-phase-commit/" class="hamburger-menu-overlay-link">two-phase commit</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/two-phase-locking/" class="hamburger-menu-overlay-link">two-phase locking</a></li>
+      
+      <li><a href="https://db-ru.github.io/categories/xml/" class="hamburger-menu-overlay-link">xml</a></li>
+      
+      
+    </ul>
+  </div>
+</nav>
+
+    <main class="content side-text-padding">
+      <article class="post dropcase">
+        <header class="post-header">
+          <h1 class="post-title">Readings in Database Systems 5. Масштабируемые механизмы обработки данных</h1>
+          <p class="post-date">Posted <time datetime="2020-08-23">Aug 23, 2020</time></p>
+        </header>
+        
+        
+        <blockquote>
+<p>Избранные статьи:</p>
+<ul>
+<li>Jeff Dean and Sanjay Ghemawat. MapReduce: Simplified Data Processing on
+Large Clusters. OSDI, 2004.</li>
+<li>Yuan Yu, Michael Isard, Dennis Fetterly, Mihai Budiu. DryadLINQ: A System for
+General-Purpose Distributed Data-Parallel Computing Using a High-Level Language.
+OSDI, 2008.</li>
+</ul>
+<p>Автор: Michael Stonebraker</p>
+</blockquote>
+Из многих разработок в области управления данными за последнее десятилетие MapReduce и последующие крупномасштабные системы обработки данных стали одними из самых пробивных и самых противоречивых. Низкая стоимость хранения данных и их растущие объемы побудили многих поставщиков интернет-услуг отказаться от традиционных баз данных и хранилищ, а вместо этого создать свои собственные механизмы.
+<p>Ряд публикаций Google об их крупномасштабных системах, включая Google File
+System <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, MapReduce, Chubby <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> и BigTable <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>, возможно, самые
+известные и влиятельные на рынке. Практически во всех случаях в этих новых
+собственных системах реализовано небольшое подмножество функций обычных баз
+данных, включая языки высокого уровня, оптимизаторы запросов и эффективные
+стратегии выполнения. Однако эти системы и образовавшаяся экосистема Hadoop с
+открытым исходным кодом оказались очень популярными у многих разработчиков.
+Это привело к значительным инвестициям, маркетингу, исследовательскому интересу
+и развитию этих платформ, которые сегодня постоянно меняются, но как экосистема
+стали напоминать традиционные хранилища данных - с некоторыми важными
+модификациями. Мы размышляем об этих тенденциях здесь.</p>
+<h2 id="history-and-successors">История и преемники</h2>
+<p>Нашим первым чтением будет оригинальная статья Google MapReduce 2004 года.
+MapReduce была библиотекой, созданной для упрощения параллельных распределенных
+вычислений над распределенными данными в масштабе Google, в частности, для
+пакетной перестройки индексов веб-поиска из просканированных страниц.
+Маловероятно, что в то время традиционное хранилище данных могло справиться с
+такой нагрузкой. Однако по сравнению с обычным хранилищем данных MapReduce
+предоставляет интерфейс очень низкого уровня (двухэтапный поток данных,
+two-stage dataflow), который тесно связан со стратегией отказоустойчивого
+выполнения (промежуточная материализация между двухэтапным потоком данных).
+Не менее важно, что MapReduce разрабатывался как библиотека для параллельного
+программирования, а не как решение для комплексного хранилища данных; например,
+MapReduce делегирует хранилище файловой системе Google (Google File System).
+В то время члены сообщества баз данных осуждали данную архитектуру как упрощенную,
+неэффективную и ограниченную в использовании <sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>.</p>
+<p>Хотя оригинальная статья о MapReduce была выпущена в 2003 году, до 2006 года,
+когда Yahoo открыла исходный код реализации Hadoop MapReduce, не было практически
+никакой активноcти вне Google. Впоследствии произошел взрыв интереса: в течение
+года в разработке находился ряд проектов, включая Dryad (Microsoft) <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>, Hive
+(Facebook) <sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>, Pig (Yahoo) <sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>. Эти системы, которые мы будем называть
+системами MapReduce, приобрели значительную популярность у разработчиков,
+которые в основном были сконцентрированы в Кремниевой долине, а также привлекли
+серьезные венчурные инвестиции. Множество исследований, охватывающих системы,
+базы данных и сетевые сообщества, изучали вопросы, включая планирование,
+устранение отставания, отказоустойчивость, оптимизацию запросов UDF и
+альтернативные модели программирования <sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>.</p>
+<p>Практически сразу же пост-MapReduce системы расширили свой интерфейс и
+функциональность, включив в них более сложные декларативные интерфейсы,
+стратегии оптимизации запросов и эффективные среды выполнения. Сегодняшние
+системы MapReduce начинают реализовывать всё большую часть набора функций
+обычных СУБД. Последнее поколение движков обработки данных, таких как Spark
+<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup>, F1 <sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup>, Impala <sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">11</a></sup>, Tez <sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">12</a></sup>, Naiad <sup id="fnref:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">13</a></sup>, Flink/Stratosphere <sup id="fnref:14"><a href="#fn:14" class="footnote-ref" role="doc-noteref">14</a></sup>,
+AsterixDB <sup id="fnref:15"><a href="#fn:15" class="footnote-ref" role="doc-noteref">15</a></sup> и Drill <sup id="fnref:16"><a href="#fn:16" class="footnote-ref" role="doc-noteref">16</a></sup> часто:</p>
+<ul>
+<li>предлагают языки запросов более высокого уровня, такие как SQL</li>
+<li>предлагают более продвинутые стратегии выполнения, включая возможность
+обработки общих графиков операторов</li>
+<li>используют индексы и другие функции источников структурированных входных
+данных (там, где возможно)
+В экосистеме Hadoop механизмы потока данных стали основой для набора
+высокоуровневых функций и декларативных интерфейсов, включая SQL <sup id="fnref:17"><a href="#fn:17" class="footnote-ref" role="doc-noteref">17</a></sup> <sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>,
+обработку графов <sup id="fnref:18"><a href="#fn:18" class="footnote-ref" role="doc-noteref">18</a></sup> <sup id="fnref:19"><a href="#fn:19" class="footnote-ref" role="doc-noteref">19</a></sup> и машинное обучение <sup id="fnref:20"><a href="#fn:20" class="footnote-ref" role="doc-noteref">20</a></sup> <sup id="fnref:21"><a href="#fn:21" class="footnote-ref" role="doc-noteref">21</a></sup>.</li>
+</ul>
+<p>Также растет интерес к функциональности потоковой обработки, пересматривая
+многие концепции, впервые появившиеся в сообществе баз данных в 2000-х годах.
+Растущие коммерческая и экосистема с открытым исходным кодом разработали
+«соединители» для различных структурированных и полуструктурированных источников
+данных, функций каталога (например, HCatalog), обслуживания данных и
+ограниченных транзакционных возможностей (например, HBase). Большая часть этих
+функций, таких как типичные оптимизаторы запросов в этих средах, являются
+элементарными по сравнению со многими зрелыми коммерческими базами данных, но
+быстро развиваются.</p>
+<p>DryadLINQ, вторая выбранная статья для чтения этого раздела, возможно, наиболее
+интересна своим интерфейсом: набором встроенных языковых привязок для обработки
+данных, который легко интегрируется с Microsoft .NET LINQ для создания библиотеки
+параллельных коллекций. DryadLINQ выполняет запросы через более раннюю систему
+Dryad <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>, в которой реализована среда выполнения для произвольных графов
+потока данных с использованием отказоустойчивости на основе воспроизведения.
+Хотя DryadLINQ по-прежнему ограничивает программистов набором преобразований
+наборов данных без побочных эффектов (включая «SQL-подобные» операции), он
+предоставляет интерфейс значительно более высокого уровня, чем Map Reduce.
+Языковая интеграция DryadLINQ, легкая отказоустойчивость и базовые методы
+оптимизации запросов оказали влияние на более поздние системы обработки данных,
+включая Apache Spark <sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup> и Microsoft Naiad <sup id="fnref:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">13</a></sup>.</p>
+<h2 id="impact-and-legacy">Вклад и наследение</h2>
+<p>Существует по крайней мере три длительных воздействия явления MapReduce, которых
+в противном случае могло бы не произойти. Эти идеи, как и сам распределенный
+поток данных, не обязательно новы, но экосистема систем хранения и обработки
+потоков данных после MapReduce значительно усилила их влияние:</p>
+<ol>
+<li><em>Гибкость схемы</em>. Возможно, самое важное, что традиционные хранилища
+данных - это «огороженные огороды»: загруженные данные являются чистыми,
+тщательно отобранными и имеют структуру. Напротив, системы MapReduce
+обрабатывают произвольно структурированные данные, чистые или грязные,
+тщательно отобранные или нет. Шаг загрузки отсутствует. Это означает, что
+пользователи могут сначала сохранить данные, а потом решить, что с ними
+делать. В сочетании с тем фактом, что хранение (например, в файловой системе
+Hadoop) значительно дешевле, чем в традиционном хранилище данных,
+пользователи могут позволить себе хранить данные все дольше и дольше. Это
+серьезный отход от традиционных хранилищ данных и ключевой фактор
+распространения и накопления «больших данных». Растущее число форматов
+хранения (например, Avro, Parquet, RCFile) объединяет полуструктурированные
+данные и результаты прогресса в хранении данных, например, поколоночное
+хранение. В отличие от XML, эта новейшая волна полуструктурированных данных
+еще более гибкая. В результате задачи извлечения-преобразования-загрузки
+(ETL) являются основной рабочей нагрузкой для пост-MapReduce движков. Трудно
+переоценить влияние гибкости схемы на современную практику управления данными
+на всех уровнях, от аналитика до программиста и поставщика аналитических
+услуг, и мы полагаем, что в будущем это станет еще более важным. Однако эта
+неоднородность не бесплатна: курировать такие «озера данных» стоит дорого
+(гораздо больше, чем хранение), и это тема, которую мы подробно рассмотрим в
+главе 12.</li>
+<li><em>Гибкость интерфейса</em>. Сегодня большинство пользователей взаимодействуют с
+движками «больших данных» на языках, подобных SQL. Однако, эти движки также
+позволяют пользователям программировать, используя комбинацию парадигм.
+Например, организация может использовать императивный код для выполнения
+синтаксического анализа файлов, SQL для проецирования столбцов и подпрограммы
+машинного обучения для кластеризации результатов - и все это в рамках одного
+инструмента. Тесная идиоматическая языковая интеграция, как в DryadLINQ,
+является обычным явлением, что еще больше улучшает программируемость. В то
+время как традиционные базы данных исторически поддерживали
+определяемые пользователем функции, интерфейсы этих новых движков упрощают
+выражение определяемых пользователем вычислений, а также упрощают интеграцию
+результатов определяемых пользователем вычислений с результатами запросов,
+выраженными с использованием традиционных реляционных конструкций, таких как
+SQL. Гибкость интерфейса и интеграция являются сильным аргументом в пользу
+предложений по аналитике данных; возможность сочетать ETL, аналитику и
+постобработку в единой системе чрезвычайно удобна для программистов, но не
+обязательно для пользователей традиционных инструментов бизнес-аналитики,
+которые используют традиционные интерфейсы JDBC.</li>
+<li><em>Архитектурная гибкость</em>. Общая критика РСУБД заключается в том, что их
+архитектура слишком тесно связана: хранение, обработка запросов, управление
+памятью, обработка транзакций и прочие тесно взаимосвязаны, при этом на
+практике между ними отсутствует четкий интерфейс. Напротив, в результате
+восходящего развития экосистема Hadoop фактически построила хранилище данных
+в виде серии модулей. Сегодня организации могут писать и запускать программы
+в сырой файловой системе (например, HDFS), в любом количестве движков
+потока данных (например, Spark), используя пакеты расширенной аналитики
+(например, GraphLab <sup id="fnref:22"><a href="#fn:22" class="footnote-ref" role="doc-noteref">22</a></sup>, Parameter Server <sup id="fnref:23"><a href="#fn:23" class="footnote-ref" role="doc-noteref">23</a></sup>) или или через SQL
+(например, Impala <sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">11</a></sup>). Эта гибкость увеличивает накладные расходы на
+производительность, но возможность смешивать и сопоставлять компоненты и
+аналитические пакеты беспрецедентна в этом масштабе. Эта архитектурная
+гибкость, пожалуй, наиболее интересна разработчикам систем и поставщикам, у
+которых есть дополнительные степени свободы при проектировании своих
+инфраструктурных предложений.</li>
+</ol>
+<p>Подводя итог, можно сказать, что доминирующей темой в современной инфраструктуре
+управления распределенными данными является гибкость и неоднородность: форматов
+хранения, парадигм вычислений и реализаций систем. Из них неоднородность формата
+хранения, вероятно, оказывает наибольшее влияние на порядок или даже больше
+просто потому, что она одинаково влияет как на новичков, так и на экспертов и
+архитекторов. Напротив, неоднородность вычислительных парадигм больше всего
+влияет на экспертов и архитекторов, в то время как неоднородность реализации
+систем больше всего влияет на архитекторов. Все три являются актуальными и
+захватывающими разработками для исследования баз данных, с нерешенными вопросами
+о влиянии на рынок и долговечности.</p>
+<h2 id="looking-ahead">Заглядывая вперёд</h2>
+<p>В некотором смысле, идея MapReduce была недолговечной, экстремальной архитектурой,
+которая открыла пространство для дизайна. Архитектура была простой и хорошо
+масштабируемой, а её успех в области открытого исходного кода заставил многих
+осознать, что существует спрос на альтернативные решения и воплощенный в них
+принцип гибкости (не говоря уже о рыночных возможностях для более дешевых
+решений для хранилищ данных, основанных на открытых решениях). Возникший в
+результате интерес по-прежнему удивляет многих и объясняется многими факторами,
+включая дух времени сообщества, грамотный маркетинг, экономику и технологические
+сдвиги. Интересно рассмотреть, какие различия между этими новыми системами и
+СУБД являются фундаментальными, а какие обусловлены инженерными улучшениями.</p>
+<p>Сегодня всё ещё ведутся споры о подходящей архитектуре для масштабируемой
+обработки данных. Например, Расмуссен и др. даюти веский аргумент в пользу
+того, почему промежуточная отказоустойчивость (<em>intermediate fault tolerance</em>)
+не нужна, за исключением очень больших (более 100 узлов) кластеров <sup id="fnref:24"><a href="#fn:24" class="footnote-ref" role="doc-noteref">24</a></sup>.
+В качестве другого примера, McSherry и др. красочно проиллюстрировали, что
+многие рабочие нагрузки могут быть эффективно обработаны с использованием одного
+сервера (или потока!), что вообще устраняет необходимость в распределении <sup id="fnref:25"><a href="#fn:25" class="footnote-ref" role="doc-noteref">25</a></sup>.
+Недавно в таких системах, как проект GraphLab <sup id="fnref:22"><a href="#fn:22" class="footnote-ref" role="doc-noteref">22</a></sup> было высказано
+предположение, что предметно-ориентированные системы необходимы для повышения
+производительности; более поздние работы, в том числе Grail <sup id="fnref:26"><a href="#fn:26" class="footnote-ref" role="doc-noteref">26</a></sup> и GraphX <sup id="fnref:18"><a href="#fn:18" class="footnote-ref" role="doc-noteref">18</a></sup>,
+опровергли это предположение. Следующая волна недавних предложений также
+предлагала новые интерфейсы и системы для потоковой обработки (<em>stream
+processing</em>), обработки графов, асинхронного программирования и
+универсального машинного обучения. Действительно ли нужны эти специализированные
+системы, или все они могут управляться одной аналитической машиной? Время
+покажет, но я чувствую толчок к консолидации.</p>
+<p>Наконец, было бы упущением не упомянуть Spark, которому всего шесть лет, но
+который становится все более популярным среди разработчиков и очень хорошо
+поддерживается как стартапами, поддерживаемыми венчурным капиталом (например,
+Databricks), так и такими авторитетными фирмами, как Cloudera и IBM. Хотя мы
+включили DryadLINQ в качестве пост-MapReduce примера из-за её
+исторической значимости и технической глубины, статья Spark <sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup>, написанная в
+первые дни проекта, и недавние расширения, включая SparkSQL <sup id="fnref:17"><a href="#fn:17" class="footnote-ref" role="doc-noteref">17</a></sup>, заслуживают
+внимания. Как и Hadoop, Spark привлек большой интерес на относительно ранней
+стадии развития. Сегодня Spark еще предстоит пройти путь до того, как его набор
+функций станет конкурентом традиционного хранилища данных. Однако его набор
+функций быстро растет, и ожидания от Spark как преемника MapReduce в экосистеме
+Hadoop высоки; например, Cloudera работает над заменой MapReduce на Spark в
+экосистеме Hadoop <sup id="fnref:27"><a href="#fn:27" class="footnote-ref" role="doc-noteref">27</a></sup>. Время покажет, верны ли эти ожидания; между тем, разрыв
+между традиционными хранилищами и системами, появившимися после MapReduce,
+быстро сокращается, в результате чего создаются системы, которые не только
+хороши в хранилищах данных, но и в гораздо больших областях.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>S. Ghemawat, H. Gobioff, and S.-T. Leung. The google file system. In
+SOSP, 2003.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>M. Burrows. The chubby lock service for loosely-coupled distributed
+systems. In OSDI, 2006.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>F. Chang, J. Dean, S. Ghemawat, W. C. Hsieh, D. A. Wallach, M. Burrows,
+T. Chandra, A. Fikes, and R. E.  Gruber. Bigtable: A distributed storage
+system for structured data. In OSDI, 2006.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>D. DeWitt and M. Stonebraker. Mapreduce: A major step backwards. The
+Database Column, 2008.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p>M. Isard, M. Budiu, Y. Yu, A. Birrell, and D. Fetterly. Dryad:
+distributed data-parallel programs from sequential building blocks. In EuroSys, 2007.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p>A. Thusoo, J. S. Sarma, N. Jain, Z. Shao, P. Chakka, S. Anthony, H. Liu,
+P. Wyckoff, and R. Murthy. Hive: A warehousing solution over a map-reduce
+framework. In VLDB, 2009.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7" role="doc-endnote">
+<p>C. Olston, B. Reed, U. Srivastava, R. Kumar, and A. Tomkins. Pig latin:
+a not-so-foreign language for data processing. In SIGMOD, 2008.&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8" role="doc-endnote">
+<p>S. Babu and H. Herodotou. Massively parallel databases and MapReduce
+systems. Foundations and Trends in Databases, 5(1):1–104, 2013.&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:9" role="doc-endnote">
+<p>M. Zaharia, M. Chowdhury, T. Das, A. Dave, J. Ma, M. McCauley, M. J.
+Franklin, S. Shenker, and I. Stoica.  Resilient distributed datasets: A
+fault-tolerant abstraction for in-memory cluster computing. In NSDI, 2012.&#160;<a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:10" role="doc-endnote">
+<p>J. Shute, R. Vingralek, B. Samwel, B. Handy, C. Whipkey, E. Rollins, M.
+Oancea, K. Littlefield, D. Menestrina, S. Ellner, et al. F1: A distributed sql
+database that scales. In VLDB, 2013.&#160;<a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:11" role="doc-endnote">
+<p>M. Kornacker, A. Behm, V. Bittorf, T. Bobrovytsky, C. Ching, A. Choi, J.
+Erickson, M. Grund, D. Hecht, M. Jacobs, et al. Impala: A modern, open-source
+sql engine for hadoop. In CIDR, 2015.&#160;<a href="#fnref:11" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:12" role="doc-endnote">
+<p>Apache Tez. <a href="https://tez.apache.org/">https://tez.apache.org/</a>.&#160;<a href="#fnref:12" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:13" role="doc-endnote">
+<p>D. G. Murray, F. McSherry, R. Isaacs, M. Isard, P. Barham, and M. Abadi.
+Naiad: A timely dataflow system.  In SOSP, 2013.&#160;<a href="#fnref:13" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:14" role="doc-endnote">
+<p>A. Alexandrov, R. Bergmann, S. Ewen, J.-C. Freytag, F. Hueske, A. Heise, O.
+Kao, M. Leich, U. Leser, V. Markl, et al. The Stratosphere platform for big
+data analytics. The VLDB Journal, 23(6):939–964, 2014.&#160;<a href="#fnref:14" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:15" role="doc-endnote">
+<p>S. Alsubaiee, Y. Altowim, H. Altwaijry, A. Behm, V. Borkar, Y. Bu, M.
+Carey, I. Cetindil, M. Cheelangi, K. Faraaz, et al. Asterixdb: A scalable,
+open source bdms. In VLDB, 2014.&#160;<a href="#fnref:15" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:16" role="doc-endnote">
+<p>M. Hausenblas and J. Nadeau. Apache Drill: Interactive ad-hoc analysis at
+scale. Big Data, 1(2):100–104, 2013.&#160;<a href="#fnref:16" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:17" role="doc-endnote">
+<p>M. Armbrust, R. S. Xin, C. Lian, Y. Huai, D. Liu, J. K. Bradley, X. Meng,
+T. Kaftan, M. J. Franklin, A. Ghodsi, et al. Spark SQL: Relational data
+processing in spark. In SIGMOD, 2015.&#160;<a href="#fnref:17" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:18" role="doc-endnote">
+<p>J. E. Gonzales, R. S. Xin, D. Crankshaw, A. Dave, M. J. Franklin, and I.
+Stoica. Graphx: Unifying data-parallel and graph-parallel analytics. In OSDI, 2014.&#160;<a href="#fnref:18" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:19" role="doc-endnote">
+<p>G. Malewicz, M. H. Austern, A. J. Bik, J. C. Dehnert, I. Horn, N.
+Leiser, and G. Czajkowski. Pregel: a system for large-scale graph processing.
+In SIGMOD, 2010.&#160;<a href="#fnref:19" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:20" role="doc-endnote">
+<p>A. Ghoting, R. Krishnamurthy, E. Pednault, B. Reinwald, V. Sindhwani, S.
+Tatikonda, Y. Tian, and S. Vaithyanathan. Systemml: Declarative machine
+learning on mapreduce. In ICDE, 2011.&#160;<a href="#fnref:20" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:21" role="doc-endnote">
+<p>E. R. Sparks, A. Talwalkar, V. Smith, J. Kottalam, X. Pan, J. Gonzalez,
+M. J. Franklin, M. Jordan, T. Kraska, et al. Mli: An api for distributed
+machine learning. In ICDM, 2013.&#160;<a href="#fnref:21" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:22" role="doc-endnote">
+<p>Y. Low, D. Bickson, J. Gonzalez, C. Guestrin, A. Kyrola, and J. M.
+Hellerstein. Distributed graphlab: a framework for machine learning and data
+mining in the cloud. In VLDB, 2012.&#160;<a href="#fnref:22" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:23" role="doc-endnote">
+<p>M. Li, D. G. Andersen, J. W. Park, A. J. Smola, A. Ahmed, V. Josifovski,
+J. Long, E. J. Shekita, and B.-Y. Su. Scaling distributed machine learning with
+the parameter server. In OSDI, 2014.&#160;<a href="#fnref:23" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:24" role="doc-endnote">
+<p>A. Rasmussen, V. T. Lam, M. Conley, G. Porter, R. Kapoor, and A. Vahdat.
+Themis: An i/o-efficient mapreduce. In SoCC, 2012.&#160;<a href="#fnref:24" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:25" role="doc-endnote">
+<p>F. McSherry, M. Isard, and D. G. Murray. Scalability! But at what COST?
+In HotOS, 2015.&#160;<a href="#fnref:25" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:26" role="doc-endnote">
+<p>J. Fan, A. Gerald, S. Raj, and J. M. Patel. The case against specialized
+graph analytics engines. In CIDR, 2015.&#160;<a href="#fnref:26" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:27" role="doc-endnote">
+<p>D. Harris. Forbes: Why Cloudera is saying ’Goodbye, MapReduce’ and
+’Hello, Spark’, 2015. <a href="http://fortune.com/2015/09/09/cloudera-spark-mapreduce/">http://fortune.com/2015/09/09/cloudera-spark-mapreduce/</a>.&#160;<a href="#fnref:27" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+      </article>
+      
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://db-ru.github.io/posts/readings-in-database-systems-4-new-dbms-architectures/" class="card blog-card" rel="bookmark" >
+  
+  <article class="card-body">
+    <h2 class="card-title">Readings in Database Systems 4. Новые архитектуры СУБД</h2>
+    <p class="card-text">Вероятно, самое важное, что произошло в среде СУБД, - это смерть подхода «всех под одну гребенку». До начала 2000-х годов традиционная дисковая архитектура с построчным хранением была повсеместной. Фактически, у коммерческих продавцов был молоток, и всё было гвоздем. За последние пятнадцать лет произошло несколько серьезных потрясений, которые мы обсудим по очереди.</p>
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="2020-08-21 821:00">Aug 21, 2020</time></p>
+      <p>#readings in database systems #red book #oltp #column store #row store #two-phase locking #Michael Stonebraker </p>
+    </div>
+  </article>
+</a>
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://db-ru.github.io" class="card home-card" style="background-image: url( https://db-ru.github.io/img/grey-cloud.jpg )" rel="bookmark" >
+  Home
+</a>
+    </nav>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+  
+  <script src="https://db-ru.github.io/js/core.min.js"></script>
+
+  </body>
+</html>

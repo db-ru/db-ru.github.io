@@ -5,44 +5,44 @@
     <description>Recent content in Categories on О БД по-русски</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru</language>
-    <lastBuildDate>Fri, 21 Aug 2020 17:52:07 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2020 12:52:58 +0300</lastBuildDate>
     
         <atom:link href="https://db-ru.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>column store</title>
-      <link>https://db-ru.github.io/categories/column-store/</link>
-      <pubDate>Fri, 21 Aug 2020 17:52:07 +0300</pubDate>
+      <title>dataflow engine</title>
+      <link>https://db-ru.github.io/categories/dataflow-engine/</link>
+      <pubDate>Sun, 23 Aug 2020 12:52:58 +0300</pubDate>
       
-      <guid>https://db-ru.github.io/categories/column-store/</guid>
+      <guid>https://db-ru.github.io/categories/dataflow-engine/</guid>
       <description></description>
     </item><item>
-      <title>Michael Stonebraker</title>
-      <link>https://db-ru.github.io/categories/michael-stonebraker/</link>
-      <pubDate>Fri, 21 Aug 2020 17:52:07 +0300</pubDate>
+      <title>google file system</title>
+      <link>https://db-ru.github.io/categories/google-file-system/</link>
+      <pubDate>Sun, 23 Aug 2020 12:52:58 +0300</pubDate>
       
-      <guid>https://db-ru.github.io/categories/michael-stonebraker/</guid>
+      <guid>https://db-ru.github.io/categories/google-file-system/</guid>
       <description></description>
     </item><item>
-      <title>oltp</title>
-      <link>https://db-ru.github.io/categories/oltp/</link>
-      <pubDate>Fri, 21 Aug 2020 17:52:07 +0300</pubDate>
+      <title>map-reduce</title>
+      <link>https://db-ru.github.io/categories/map-reduce/</link>
+      <pubDate>Sun, 23 Aug 2020 12:52:58 +0300</pubDate>
       
-      <guid>https://db-ru.github.io/categories/oltp/</guid>
+      <guid>https://db-ru.github.io/categories/map-reduce/</guid>
+      <description></description>
+    </item><item>
+      <title>Peter Bailis</title>
+      <link>https://db-ru.github.io/categories/peter-bailis/</link>
+      <pubDate>Sun, 23 Aug 2020 12:52:58 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/categories/peter-bailis/</guid>
       <description></description>
     </item><item>
       <title>readings in database systems</title>
       <link>https://db-ru.github.io/categories/readings-in-database-systems/</link>
-      <pubDate>Fri, 21 Aug 2020 17:52:07 +0300</pubDate>
+      <pubDate>Sun, 23 Aug 2020 12:52:58 +0300</pubDate>
       
       <guid>https://db-ru.github.io/categories/readings-in-database-systems/</guid>
-      <description></description>
-    </item><item>
-      <title>red book</title>
-      <link>https://db-ru.github.io/categories/red-book/</link>
-      <pubDate>Fri, 21 Aug 2020 17:52:07 +0300</pubDate>
-      
-      <guid>https://db-ru.github.io/categories/red-book/</guid>
       <description></description>
     </item>
   </channel>

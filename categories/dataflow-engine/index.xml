@@ -1,0 +1,21 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dataflow engine - О БД по-русски</title>
+    <link>https://db-ru.github.io/categories/dataflow-engine/</link>
+    <description>Recent content in dataflow engine on О БД по-русски</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru</language>
+    <lastBuildDate>Sun, 23 Aug 2020 12:52:58 +0300</lastBuildDate>
+    
+        <atom:link href="https://db-ru.github.io/categories/dataflow-engine/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Readings in Database Systems 5. Масштабируемые механизмы обработки данных</title>
+      <link>https://db-ru.github.io/posts/readings-in-database-systems-5-large-scale-dataflow-engines/</link>
+      <pubDate>Sun, 23 Aug 2020 12:52:58 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/posts/readings-in-database-systems-5-large-scale-dataflow-engines/</guid>
+      <description>Из многих разработок в области управления данными за последнее десятилетие MapReduce и последующие крупномасштабные системы обработки данных стали одними из самых пробивных и самых противоречивых. Низкая стоимость хранения данных и их растущие объемы побудили многих поставщиков интернет-услуг отказаться от традиционных баз данных и хранилищ, а вместо этого создать свои собственные механизмы.</description>
+    </item>
+  </channel>
+</rss>

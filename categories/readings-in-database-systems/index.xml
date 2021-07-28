@@ -5,11 +5,18 @@
     <description>Recent content in readings in database systems on О БД по-русски</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru</language>
-    <lastBuildDate>Fri, 21 Aug 2020 17:52:07 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2020 12:52:58 +0300</lastBuildDate>
     
         <atom:link href="https://db-ru.github.io/categories/readings-in-database-systems/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Readings in Database Systems 5. Масштабируемые механизмы обработки данных</title>
+      <link>https://db-ru.github.io/posts/readings-in-database-systems-5-large-scale-dataflow-engines/</link>
+      <pubDate>Sun, 23 Aug 2020 12:52:58 +0300</pubDate>
+      
+      <guid>https://db-ru.github.io/posts/readings-in-database-systems-5-large-scale-dataflow-engines/</guid>
+      <description>Из многих разработок в области управления данными за последнее десятилетие MapReduce и последующие крупномасштабные системы обработки данных стали одними из самых пробивных и самых противоречивых. Низкая стоимость хранения данных и их растущие объемы побудили многих поставщиков интернет-услуг отказаться от традиционных баз данных и хранилищ, а вместо этого создать свои собственные механизмы.</description>
+    </item><item>
       <title>Readings in Database Systems 4. Новые архитектуры СУБД</title>
       <link>https://db-ru.github.io/posts/readings-in-database-systems-4-new-dbms-architectures/</link>
       <pubDate>Fri, 21 Aug 2020 17:52:07 +0300</pubDate>
@@ -37,13 +44,6 @@
       
       <guid>https://db-ru.github.io/posts/readings-in-database-systems-1-background/</guid>
       <description>Я поражен тем, что эти две статьи были написаны всего десять лет назад! Моё восхищение относительно статьи по внутренностям вызвано тем, насколько сильно изменились детали всего несколько лет спустя. Мое изумление по поводу статьи по моделям данных состоит в том, что никто никогда не извлекает уроки из истории. Давайте сначала поговорим о статье по работе с моделями данных.</description>
-    </item><item>
-      <title>Readings in Database Systems. 0. Предисловие</title>
-      <link>https://db-ru.github.io/posts/readings-in-database-systems-0-preface/</link>
-      <pubDate>Sat, 11 Jul 2020 20:09:43 +0300</pubDate>
-      
-      <guid>https://db-ru.github.io/posts/readings-in-database-systems-0-preface/</guid>
-      <description>Readings in Database Systems (широко известная как &amp;lsquo;Red book&amp;rsquo;) предлагает читателям своевольный взгляд как на классические, так и на передовые исследования в области управления данными с 1988 года. Здесь представлено пятое издание - первое за последние десять лет (2015).</description>
     </item>
   </channel>
 </rss>
